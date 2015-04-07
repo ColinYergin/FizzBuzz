@@ -2,15 +2,20 @@
 
 using namespace std;
 
+//Is a a multiple of b
+bool IsMult(int a, int b) {
+	return 0 == a % b;
+}
+
 int main() {
 	for(int i = 1; i <= 100; i++) {
-		if(0 == i%3) {
+		if(IsMult(i, 3)) {
 			cout << "Fizz";
-			if (0 == i%5) {
+			if (IsMult(i, 5)) {
 				cout << "Buzz";
 			}
 		} else {
-			if (0 == i%5) {
+			if (IsMult(i, 5)) {
 				cout << "Buzz";
 			} else {
 				cout << i;
